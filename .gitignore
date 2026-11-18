@@ -1,0 +1,17 @@
+node_modules/
+dist/
+release/
+native/*.node
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+*.tsbuildinfo
+coverage/
+credentials*.json
+client_secret*.json
+oauth-client.json
+.user-data/
+GoogleSignIn/
+

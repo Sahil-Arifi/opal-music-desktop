@@ -1,0 +1,6 @@
+import {FlutedGlass} from '@paper-design/shaders-react'
+
+// This original interference pattern is refracted by Paper's fluted glass lens.
+const texture='data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240"><defs><linearGradient id="pearl" x2="1" y2=".85" gradientUnits="objectBoundingBox"><stop stop-color="#f7ddd8"/><stop offset=".25" stop-color="#d9e9f5"/><stop offset=".42" stop-color="#fff9e6"/><stop offset=".5" stop-color="#d3abd4"/><stop offset=".61" stop-color="#afaacf"/><stop offset=".64" stop-color="#fff5f0"/><stop offset=".76" stop-color="#e7d8ce"/><stop offset="1" stop-color="#bad3e2"/></linearGradient></defs><rect width="240" height="240" fill="url(#pearl)"/><path d="M-45 143 Q98 8 151 90 T300 107" fill="none" stroke="#fff" stroke-width="7" opacity=".7"/></svg>`)
+export function LaunchLens(){return <FlutedGlass aria-hidden="true" className="paper-optic" image={texture} width="100%" height="100%" fit="cover" shape="wave" distortionShape="lens" speed={0} size={.52} angle={-31} distortion={.65} shadows={.08} highlights={.24} colorHighlight="#fff" colorShadow="#847ba5" minPixelRatio={1} maxPixelCount={95000}/>}
+

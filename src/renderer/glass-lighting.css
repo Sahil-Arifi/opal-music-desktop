@@ -1,0 +1,6 @@
+/* A single pointer-transparent optical layer keeps the control's hit area stationary. */
+.glass-light-plane{--glass-x:50%;--glass-y:50%;--glass-angle:0deg;--glass-strength:0;position:fixed;top:0;left:0;z-index:2147483646;overflow:hidden;pointer-events:none;user-select:none;contain:strict;opacity:0;transition:opacity 120ms ease-out;will-change:transform}
+.glass-light-plane.lit{opacity:var(--glass-strength);transition-duration:55ms}
+.glass-light-plane:before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(ellipse 45% 95% at var(--glass-x) var(--glass-y),#ffffffe6,#ffffff52 40%,transparent 85%)}
+button.btn.glass-pointed:after{opacity:0}
+

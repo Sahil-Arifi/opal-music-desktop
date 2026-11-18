@@ -1,0 +1,6 @@
+.playback-mode[aria-pressed=true]{color:var(--music-accent)}
+.playback-mode[aria-pressed=true]::before{content:"";position:absolute;bottom:1px;left:calc(50% - 1.5px);width:3px;height:3px;border-radius:50%;background:currentColor}
+.expanded-player .playback-mode[aria-pressed=true]{color:var(--music-accent-bright);background:#ffffff12}
+.dock .dock-actions{gap:clamp(8px,1.2vw,18px)}
+.mini-shell .mini-transport{gap:clamp(6px,3vw,13px)}
+

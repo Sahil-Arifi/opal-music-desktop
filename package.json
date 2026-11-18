@@ -1,0 +1,66 @@
+{
+  "name": "opal-music-desktop",
+  "productName": "Opal Music Desktop",
+  "version": "0.6.12",
+  "private": true,
+  "description": "Independent, unofficial desktop interface for YouTube Music",
+  "author": "Local music app",
+  "main": "src/main/index.cjs",
+  "scripts": {
+    "build:ui": "vite build",
+    "build:native": "node scripts/native-build.cjs",
+    "build": "npm run build:native && npm run build:ui",
+    "start": "npm run build && electron .",
+    "package:mac": "npm run build && electron-builder --mac dir --arm64 && node scripts/package-mac.cjs",
+    "test": "node --test tests/*.cjs",
+    "test:live": "npm run build && node scripts/live-smoke.cjs",
+    "preview:design": "npm run build && electron . --design-preview",
+    "test:player": "npm run build:ui && node scripts/player-contrast.cjs"
+  },
+  "devDependencies": {
+    "@fontsource/dm-sans": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@paper-design/shaders-react": "^0.0.82",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "electron": "45.3.1",
+    "electron-builder": "26.18.0",
+    "lucide-react": "^1.72.0",
+    "motion": "14.13.0",
+    "node-api-headers": "1.9.0",
+    "playwright-core": "^1.60.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "typescript": "^5.9.3",
+    "vite": "8.3.8"
+  },
+  "build": {
+    "appId": "local.opal.music",
+    "productName": "Opal Music Desktop",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "src/main/**",
+      "native/prism.node",
+      "dist/renderer/**",
+      "assets/menuTemplate*.png",
+      "package.json",
+      "assets/Music-dock.png"
+    ],
+    "asarUnpack": [
+      "native/prism.node"
+    ],
+    "mac": {
+      "category": "public.app-category.music",
+      "icon": "assets/Music.icns",
+      "identity": null,
+      "extendInfo": {
+        "NSAudioCaptureUsageDescription": "Analyze this app\u2019s own audio to animate the album colors."
+      }
+    }
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "0.9.12"
+  }
+}

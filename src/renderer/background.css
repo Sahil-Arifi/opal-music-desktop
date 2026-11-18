@@ -1,0 +1,47 @@
+/* The native window material remains visible beneath a neutral, translucent ground. */
+.music-app {
+ background-color: rgb(248 249 250 / 84%);
+}
+.opal-field {
+ position: absolute;
+ inset: 0;
+ z-index: -2;
+ contain: strict;
+ pointer-events: none;
+}
+.opal-field, .previous-wash {
+ background-image:
+  radial-gradient(ellipse 66% 90% at 98% 2%, color-mix(in srgb, var(--field-accent) 16%, transparent), transparent 82%),
+  radial-gradient(ellipse 70% 100% at 10% 89%, color-mix(in srgb, var(--field-deep) 10%, transparent), transparent 80%),
+  radial-gradient(ellipse 65% 70% at 82% 100%, color-mix(in srgb, var(--field-glint) 18%, transparent), transparent 80%);
+}
+.previous-wash {
+ position: absolute;
+ inset: 0;
+ opacity: 0;
+ background-color: #f8f9fa;
+}
+/* Meter packets change one small surface rather than the entire backdrop. */
+.dock-actions .dock-play:before {
+ content: '';
+ position: absolute;
+ pointer-events: none;
+ inset: -4px;
+ border-radius: 50%;
+ background: radial-gradient(circle, transparent 50%, var(--music-accent) 67%, transparent 74%);
+ opacity: calc(var(--low, 0) * .38);
+}
+
+/* Color remains visible through the frosted shell and shared controls. */
+.music-app{background-color:rgb(248 249 250 / 38%)}
+.glass-flow{width:100%;height:100%;position:absolute;inset:0;opacity:.65;pointer-events:none}
+.global-search-field,.dock,.dock-player,.suggest-popover{background:rgb(245 245 249 / 38%);backdrop-filter:blur(24px) saturate(135%);-webkit-backdrop-filter:blur(24px) saturate(135%)}
+.global-search-field{transition:background .18s,box-shadow .18s,transform .18s}
+.global-search-field:hover{background:rgb(255 255 255 / 52%);box-shadow:0 6px 24px #0000000c}
+.suggest-row,.track-row,.player-queue-row{transition:background-color .18s,transform .18s}
+.suggest-row:hover,.track-row:hover,.player-queue-row:hover{background-color:#ffffff18;transform:translateY(-1px)}
+.player-source-toggle button:disabled{opacity:.3;cursor:not-allowed}
+@media(prefers-reduced-motion:reduce){.suggest-row,.track-row,.player-queue-row{transform:none!important}}
+
+.glass-flow{background-size:100% 100%}
+

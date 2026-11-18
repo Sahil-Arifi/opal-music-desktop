@@ -1,0 +1,12 @@
+.collection-dialog{max-height:calc(100dvh - 36px);overflow-y:auto}
+.playlist-cover-setting{display:flex;align-items:center;gap:14px;margin:0 0 17px}
+.playlist-cover-setting .collection-art{width:70px;height:70px;flex:none;border-radius:12px;overflow:hidden}
+.playlist-cover-setting .btn{width:auto;min-height:32px;gap:7px;padding:0 12px;border-radius:18px;font-size:12px;background:#fff9}
+.playlist-cover-setting small{display:flex;align-items:center;gap:4px;color:#615767;font-size:11px;margin:4px 0 0 8px}
+.playlist-description{margin-top:13px}
+.collection-dialog textarea{width:100%;min-height:62px;max-height:160px;resize:vertical;padding:9px 10px;border-radius:8px;border:1px solid #4f3d4f30;background:#ffffffd9;color:#2b252e;font:inherit;line-height:1.4}
+.playlist-detail-tools{position:relative;display:inline-flex;align-items:center;flex-shrink:0}
+.playlist-card-tools .playlist-detail-tools>.btn{width:28px;height:28px;min-width:28px;border-radius:50%;background:#fffafacc;backdrop-filter:blur(16px)}
+.playlist-detail-tools .playlist-menu{z-index:6;min-width:155px;color:#312a34;text-align:left}
+.playlist-detail-tools .playlist-menu>button{text-align:left}
+

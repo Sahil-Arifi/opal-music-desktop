@@ -1,0 +1,7 @@
+.stats-periods>button{position:relative;isolation:isolate}.stats-periods>button[aria-pressed=true]{background:transparent;box-shadow:none}.stats-periods>button>span{position:relative}.stats-period-lens{position:absolute;inset:0;z-index:-1;border-radius:inherit;background:#fff;box-shadow:0 1px 4px #33203a16;pointer-events:none}
+
+.stats-rank-open{display:flex;align-items:center;gap:10px;min-width:0;width:100%;padding:5px 3px;border-radius:8px;text-align:left;transition:background-color .16s}
+.stats-list li:has(.stats-rank-open){padding-block:0}
+.stats-rank-open:is(:hover,:focus-visible){background:color-mix(in srgb,currentColor 7%,transparent)}
+button.stats-feature{text-align:left}
+

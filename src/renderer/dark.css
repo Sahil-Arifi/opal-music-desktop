@@ -1,0 +1,37 @@
+:root{color-scheme:dark;color:#f4f3f8}
+.music-app{background:rgb(14 15 20 / 76%)!important;color:#f4f3f8}
+.music-app .global-search-field,.music-app .dock,.music-app .suggest-popover,.music-app .glass-select-menu,.music-app .song-menu,.music-app .playlist-settings{color:#f4f3f8!important;background:rgb(29 30 39 / 64%)!important;border-color:#ffffff14!important;backdrop-filter:blur(24px) saturate(130%)}
+.music-app .global-search-field:hover{background:#ffffff12!important}
+.music-app .suggest-pick,.music-app .dock-track,.music-app .page,.music-app input{color:#f4f3f8}
+.music-app .page small,.music-app .album small,.music-app .suggest-pick small,.music-app .view-intro,.music-app .dock small,.music-app .dock-track small,.music-app .track-artist,.music-app .section-count{color:#c3bfce!important}
+.music-app .recent,.music-app .collection-filter,.music-app .glass-select-trigger{background:#ffffff08!important;color:#eae8f2;border-color:#ffffff12}
+.music-app .song-menu button,.music-app .glass-select-menu button{color:#eceaf4}
+.music-app .btn:hover:enabled,.music-app .suggest-row:hover,.music-app .track-row:hover{background:#ffffff0f}
+.music-app .dock .dock-play{background:var(--music-accent-bright);color:#15131c}
+.music-app .dock .range{accent-color:var(--music-accent-bright)}
+.previous-wash{background-color:#111218}
+.music-app .page :is(h1,h2,h3),.music-app .suggest-label{color:#f2f0f7}
+.music-app .recent-item,.music-app .album,.music-app .track-pick{color:inherit}
+/* The window supplies the frosted material. Avoid a second full-width blur pass. */
+.music-app .dock,.music-app .global-search-field{backdrop-filter:none;-webkit-backdrop-filter:none}
+/* Dark surfaces own their material; legacy light optical layers stay unpainted. */
+.music-app .dock{background:linear-gradient(115deg,#20212be8,#171820eb)!important;box-shadow:0 10px 32px #0005,inset 0 1px 0 #ffffff0b!important;border:0!important}
+.music-app .dock-glass{background:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.music-app .dock-glass:after{display:none}
+.music-app .dock-track,.music-app .dock-actions,.music-app .dock-right{color:#f3f1f8}
+.music-app .dock-actions .dock-play{background:#e8e3f0;color:#19171f;box-shadow:none}
+.music-app .dock .range{color:#d5cede;--range-ink:#d5cede}
+.music-app .recent{background:#ffffff03!important;border:0!important;box-shadow:none!important;backdrop-filter:none;padding:18px 14px}
+.music-app .recent-head{color:#d2cfdb;font-size:15px;font-weight:500}
+.music-app .recent-item{background:transparent!important;border:0!important;box-shadow:none!important;border-radius:10px;padding:12px 8px;margin:2px 0}
+.music-app .recent-item:before{display:none}
+.music-app .recent-item:hover{background:#ffffff08!important}
+.music-app .hero{box-shadow:none;border:0;background:#18191e}
+.music-app .global-search-field{box-shadow:inset 0 1px #ffffff08!important;border:1px solid #ffffff0d!important;background:#18191f99!important}
+.music-app .global-search-field input::placeholder{color:#aaa5b4}
+.music-app .top-round{border-color:#ffffff14;box-shadow:none;background:#ffffff08;color:#d8d4e1}
+.music-app .hero:before{opacity:.48}
+.music-app .hero-haze{background:linear-gradient(105deg,#0e0e14ed,#15151da8 62%,#15151d55)}
+.music-app .hero-cta{background:#e9e5f2!important;color:#17151e!important;border:0;box-shadow:none}
+.music-app .page h1{font-size:clamp(34px,3.6vw,50px);letter-spacing:-.055em}
+
